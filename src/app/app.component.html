@@ -8,14 +8,20 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+      <li class="nav-item" style="cursor: pointer">
+        <a
+           [ngClass]="{'nav-link': true, 'btn-toggle-nav': true, 'text-white': !isActiveTab('map'), 'active': isActiveTab('map')}"
+           aria-current="page"
+           (click)="changeTab('map')">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
           Map
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link text-white">
+      <li class="nav-item" style="cursor: pointer">
+        <a
+           [ngClass]="{'nav-link': true, 'btn-toggle-nav': true, 'text-white': !isActiveTab('settings'), 'active': isActiveTab('settings')}"
+           (click)="changeTab('settings')"
+        >
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
           Settings
         </a>
@@ -23,7 +29,9 @@
     </ul>
   </div>
 
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
 
+  </div>
 </main>
 
