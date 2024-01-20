@@ -1,1 +1,8 @@
-<p>flight-map works!</p>
+<div>
+  <button class="btn-toggle" (click)="toogleIsRunning()">{{isRunning ? "Running" : "Not Running"}}</button>
+  <ul>
+    <li *ngFor = "let flight of flights">
+      {{flight.squawk}}
+    </li>
+  </ul>
+</div>
