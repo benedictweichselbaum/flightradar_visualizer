@@ -1,9 +1,9 @@
 <main class="d-flex flex-nowrap">
   <h1 class="visually-hidden">Sidebars examples</h1>
 
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px; height: 100%">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <img class="bi pe-none me-2" width="40" height="32" src="assets/tab_icons/Plane%20Take%20Off.svg"/>
       <span class="fs-4">Flightradar Visualizer</span>
     </a>
     <hr>
@@ -13,7 +13,7 @@
            [ngClass]="{'nav-link': true, 'btn-toggle-nav': true, 'text-white': !isActiveTab('map'), 'active': isActiveTab('map')}"
            aria-current="page"
            (click)="changeTab('map')">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          <img class="bi pe-none me-2" width="16" height="16" src="./assets/tab_icons/Map_Vector.svg" alt="Map Image"/>
           Map
         </a>
       </li>
@@ -22,7 +22,7 @@
            [ngClass]="{'nav-link': true, 'btn-toggle-nav': true, 'text-white': !isActiveTab('settings'), 'active': isActiveTab('settings')}"
            (click)="changeTab('settings')"
         >
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          <img class="bi pe-none me-2" width="16" height="16" src="assets/tab_icons/settings-svgrepo-com.svg" alt="Settings Icon"/>
           Settings
         </a>
       </li>
@@ -31,7 +31,6 @@
 
   <div class="container">
     <router-outlet></router-outlet>
-
   </div>
 </main>
 

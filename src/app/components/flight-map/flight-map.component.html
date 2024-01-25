@@ -1,8 +1,8 @@
 <div>
-  <button class="btn-toggle" (click)="toogleIsRunning()">{{isRunning ? "Running" : "Not Running"}}</button>
-  <ul>
-    <li *ngFor = "let flight of flights">
-      {{flight.squawk}}
-    </li>
-  </ul>
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+    <button id="activeBtn" class="btn-toggle" (click)="toogleIsRunning()">{{isRunning ? "Running" : "Not Running"}}</button>
+  </div>
 </div>
